@@ -12,14 +12,6 @@ class ViewController: UITableViewController {
 
     var filters : [String]  = []
     
-    /*
-     // Create and share access to an NSUserDefaults object
-     NSUserDefaults *mySharedDefaults = [[NSUserDefaults alloc] initWithSuiteName: @"com.example.domain.MyShareExtension"];
-     
-     // Use the shared user defaults object to update the user's account
-     [mySharedDefaults setObject:theAccountName forKey:@"lastAccountName"];
-     */
-    
     func loadSavedFilters() -> Void {
         let defaults = UserDefaults.init(suiteName: "group.rakBibi")
         filters = defaults?.stringArray(forKey: "myFilters") ?? [String]()
@@ -45,6 +37,7 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadSavedFilters()
+        tableView.allowsSelection = false;
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -74,20 +67,34 @@ class ViewController: UITableViewController {
         
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        if (indexPath.row == 0) {
+            return false
+        }
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            filters.remove(at: indexPath.row - 1)
+            saveFilters()
+            DispatchQueue.main.async { self.tableView.reloadData() }
+        }
+    }
+    
     @IBAction func onAddFilterPressed(_ sender: Any) {
         //1. Create the alert controller.
         let alert = UIAlertController(title: "Add new filter", message: "Enter a text", preferredStyle: .alert)
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
-            textField.text = "?"
+            textField.text = ""
         }
         
         // 3. Grab the value from the text field, and print it when the user clicks OK.
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             let newFilter = textField?.text
-            print("Text field: \(newFilter)")
             self.addNewFilter(newFilter: newFilter ?? "")
         }))
         
