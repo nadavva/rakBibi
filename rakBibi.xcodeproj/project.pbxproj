@@ -14,6 +14,8 @@
 		D31D7EFA21D3785A00178D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31D7EF821D3785A00178D7D /* LaunchScreen.storyboard */; };
 		D31D7F0521D3785A00178D7D /* rakBibiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7F0421D3785A00178D7D /* rakBibiTests.swift */; };
 		D31D7F1021D3785A00178D7D /* rakBibiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7F0F21D3785A00178D7D /* rakBibiUITests.swift */; };
+		D31D7F2421D378B000178D7D /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7F2321D378B000178D7D /* MessageFilterExtension.swift */; };
+		D31D7F2821D378B000178D7D /* RakBibiFilter.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D31D7F2121D378B000178D7D /* RakBibiFilter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,28 @@
 			remoteGlobalIDString = D31D7EEB21D3785900178D7D;
 			remoteInfo = rakBibi;
 		};
+		D31D7F2621D378B000178D7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D31D7EE421D3785900178D7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D31D7F2021D378B000178D7D;
+			remoteInfo = RakBibiFilter;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D31D7F2C21D378B000178D7D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				D31D7F2821D378B000178D7D /* RakBibiFilter.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D31D7EEC21D3785900178D7D /* rakBibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rakBibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +70,11 @@
 		D31D7F0B21D3785A00178D7D /* rakBibiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rakBibiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31D7F0F21D3785A00178D7D /* rakBibiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rakBibiUITests.swift; sourceTree = "<group>"; };
 		D31D7F1121D3785A00178D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31D7F2121D378B000178D7D /* RakBibiFilter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RakBibiFilter.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D31D7F2321D378B000178D7D /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
+		D31D7F2521D378B000178D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D31D7F2D21D3A19500178D7D /* RakBibiFilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RakBibiFilter.entitlements; sourceTree = "<group>"; };
+		D31D7F2E21D3A1AC00178D7D /* rakBibi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = rakBibi.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D31D7F1E21D378B000178D7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +115,7 @@
 				D31D7EEE21D3785900178D7D /* rakBibi */,
 				D31D7F0321D3785A00178D7D /* rakBibiTests */,
 				D31D7F0E21D3785A00178D7D /* rakBibiUITests */,
+				D31D7F2221D378B000178D7D /* RakBibiFilter */,
 				D31D7EED21D3785900178D7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +126,7 @@
 				D31D7EEC21D3785900178D7D /* rakBibi.app */,
 				D31D7F0021D3785A00178D7D /* rakBibiTests.xctest */,
 				D31D7F0B21D3785A00178D7D /* rakBibiUITests.xctest */,
+				D31D7F2121D378B000178D7D /* RakBibiFilter.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +134,7 @@
 		D31D7EEE21D3785900178D7D /* rakBibi */ = {
 			isa = PBXGroup;
 			children = (
+				D31D7F2E21D3A1AC00178D7D /* rakBibi.entitlements */,
 				D31D7EEF21D3785900178D7D /* AppDelegate.swift */,
 				D31D7EF121D3785900178D7D /* ViewController.swift */,
 				D31D7EF321D3785900178D7D /* Main.storyboard */,
@@ -125,6 +163,16 @@
 			path = rakBibiUITests;
 			sourceTree = "<group>";
 		};
+		D31D7F2221D378B000178D7D /* RakBibiFilter */ = {
+			isa = PBXGroup;
+			children = (
+				D31D7F2D21D3A19500178D7D /* RakBibiFilter.entitlements */,
+				D31D7F2321D378B000178D7D /* MessageFilterExtension.swift */,
+				D31D7F2521D378B000178D7D /* Info.plist */,
+			);
+			path = RakBibiFilter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +183,12 @@
 				D31D7EE821D3785900178D7D /* Sources */,
 				D31D7EE921D3785900178D7D /* Frameworks */,
 				D31D7EEA21D3785900178D7D /* Resources */,
+				D31D7F2C21D378B000178D7D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D31D7F2721D378B000178D7D /* PBXTargetDependency */,
 			);
 			name = rakBibi;
 			productName = rakBibi;
@@ -181,6 +231,23 @@
 			productReference = D31D7F0B21D3785A00178D7D /* rakBibiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D31D7F2021D378B000178D7D /* RakBibiFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D31D7F2921D378B000178D7D /* Build configuration list for PBXNativeTarget "RakBibiFilter" */;
+			buildPhases = (
+				D31D7F1D21D378B000178D7D /* Sources */,
+				D31D7F1E21D378B000178D7D /* Frameworks */,
+				D31D7F1F21D378B000178D7D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RakBibiFilter;
+			productName = RakBibiFilter;
+			productReference = D31D7F2121D378B000178D7D /* RakBibiFilter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -193,6 +260,11 @@
 				TargetAttributes = {
 					D31D7EEB21D3785900178D7D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					D31D7EFF21D3785A00178D7D = {
 						CreatedOnToolsVersion = 10.1;
@@ -201,6 +273,14 @@
 					D31D7F0A21D3785A00178D7D = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = D31D7EEB21D3785900178D7D;
+					};
+					D31D7F2021D378B000178D7D = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -220,6 +300,7 @@
 				D31D7EEB21D3785900178D7D /* rakBibi */,
 				D31D7EFF21D3785A00178D7D /* rakBibiTests */,
 				D31D7F0A21D3785A00178D7D /* rakBibiUITests */,
+				D31D7F2021D378B000178D7D /* RakBibiFilter */,
 			);
 		};
 /* End PBXProject section */
@@ -243,6 +324,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D31D7F0921D3785A00178D7D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D31D7F1F21D378B000178D7D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,6 +365,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D31D7F1D21D378B000178D7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D31D7F2421D378B000178D7D /* MessageFilterExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +385,11 @@
 			isa = PBXTargetDependency;
 			target = D31D7EEB21D3785900178D7D /* rakBibi */;
 			targetProxy = D31D7F0C21D3785A00178D7D /* PBXContainerItemProxy */;
+		};
+		D31D7F2721D378B000178D7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D31D7F2021D378B000178D7D /* RakBibiFilter */;
+			targetProxy = D31D7F2621D378B000178D7D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -431,7 +532,9 @@
 		D31D7F1521D3785A00178D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = rakBibi/rakBibi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PZV63JGX7;
 				INFOPLIST_FILE = rakBibi/Info.plist;
@@ -439,17 +542,19 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NV.rakBibi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NV.rakBibbi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D31D7F1621D3785A00178D7D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = rakBibi/rakBibi.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5PZV63JGX7;
 				INFOPLIST_FILE = rakBibi/Info.plist;
@@ -457,10 +562,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NV.rakBibi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NV.rakBibbi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -546,6 +651,46 @@
 			};
 			name = Release;
 		};
+		D31D7F2A21D378B000178D7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RakBibiFilter/RakBibiFilter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PZV63JGX7;
+				INFOPLIST_FILE = RakBibiFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NV.rakBibbi.RakBibiFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D31D7F2B21D378B000178D7D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = RakBibiFilter/RakBibiFilter.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5PZV63JGX7;
+				INFOPLIST_FILE = RakBibiFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.NV.rakBibbi.RakBibiFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -581,6 +726,15 @@
 			buildConfigurations = (
 				D31D7F1B21D3785A00178D7D /* Debug */,
 				D31D7F1C21D3785A00178D7D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D31D7F2921D378B000178D7D /* Build configuration list for PBXNativeTarget "RakBibiFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D31D7F2A21D378B000178D7D /* Debug */,
+				D31D7F2B21D378B000178D7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
