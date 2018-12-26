@@ -41,34 +41,39 @@ class ViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filters.count + 1
+        if (section == 0) {
+            return 1
+        }
+        return filters.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if (indexPath.row == 0) {
+        if (indexPath.section == 0) {
             // addFilterCell
             let cell = tableView.dequeueReusableCell(withIdentifier: "addFilterCell", for: indexPath)
-            
             return cell
-        }
-        else {
+        } else {
             //filterCell
             let cell = tableView.dequeueReusableCell(withIdentifier: "filterCell", for: indexPath)
-            
-            cell.textLabel?.text = filters[indexPath.row - 1]
-            
+            cell.textLabel?.text = filters[indexPath.row]
             return cell
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if (indexPath.section == 1) {
+            return .delete
+        }
         
+        return .none
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        if (indexPath.row == 0) {
+        if (indexPath.section < 2) {
             return false
         }
         return true
@@ -76,7 +81,7 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            filters.remove(at: indexPath.row - 1)
+            filters.remove(at: indexPath.row)
             saveFilters()
             DispatchQueue.main.async { self.tableView.reloadData() }
         }
