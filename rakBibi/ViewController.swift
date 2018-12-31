@@ -89,7 +89,7 @@ class ViewController: UITableViewController {
     
     @IBAction func onAddFilterPressed(_ sender: Any) {
         //1. Create the alert controller.
-        let alert = UIAlertController(title: "Add new filter", message: "Enter a text", preferredStyle: .alert)
+        let alert = UIAlertController(title: "הוספת פילטר", message: "הזן טקסט לסינון הודעות חדשות", preferredStyle: .alert)
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
