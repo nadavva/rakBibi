@@ -72,7 +72,7 @@ class rakBibiTests: XCTestCase {
     func testAddNewFilter_addMultySpecial() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        var before = vcFiltersTable.filters.count
+        let before = vcFiltersTable.filters.count
         let newFilterStr = "efg,,k123"
         vcFiltersTable.addNewFilter(newFilter: newFilterStr)
         XCTAssertEqual(before + 2, vcFiltersTable.filters.count, "filter count should raise by 2s")

@@ -23,8 +23,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" text="סינון SMSים" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-Nk-4Xq">
-                                    <rect key="frame" x="6.9204244031828921" y="69.652519893899125" width="358.99999999999966" height="36.000000000000028"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="סינון SMSים" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-Nk-4Xq">
+                                    <rect key="frame" x="126" y="72.666666666666671" width="123.33333333333331" height="28.666666666666671"/>
                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -40,7 +40,6 @@
                             </accessibility>
                             <constraints>
                                 <constraint firstItem="mVO-Nk-4Xq" firstAttribute="centerX" secondItem="ccE-dm-94j" secondAttribute="centerX" id="5wn-NK-27Z"/>
-                                <constraint firstItem="mVO-Nk-4Xq" firstAttribute="leading" secondItem="ccE-dm-94j" secondAttribute="leading" constant="67" id="6yZ-qp-Gyb"/>
                                 <constraint firstItem="mVO-Nk-4Xq" firstAttribute="centerY" secondItem="ccE-dm-94j" secondAttribute="centerY" id="k0K-JL-yLm"/>
                             </constraints>
                         </view>
@@ -52,8 +51,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-s8-u8u">
-                                            <rect key="frame" x="120" y="6" width="134" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-s8-u8u">
+                                            <rect key="frame" x="133" y="7.6666666666666661" width="109" height="28.333333333333336"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <state key="normal" title="+ הוספת פילטר">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
