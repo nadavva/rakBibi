@@ -54,9 +54,8 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         NSLog("Filters = \(filters)")
 
         for word in filters {
-            if let value : String = word,
-                messageBody.contains(value) {
-                NSLog("SMS contained bad word -- \(value) -- Filttered!")
+            if (messageBody.contains(word)) {
+                NSLog("SMS contained bad word -- \(word) -- Filttered!")
                 return .filter
             }
         }
