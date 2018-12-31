@@ -9,7 +9,7 @@
 import XCTest
 
 class rakBibiUITests: XCTestCase {
-
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 
@@ -24,11 +24,29 @@ class rakBibiUITests: XCTestCase {
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+
     }
 
+    
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let app = XCUIApplication()
+        let tablesQuery = app.tables
+        tablesQuery/*@START_MENU_TOKEN@*/.buttons["+ הוספת פילטר"]/*[[".cells.buttons[\"+ הוספת פילטר\"]",".buttons[\"+ הוספת פילטר\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let filterAlert = app.alerts
+        let textField = filterAlert.textFields.element
+        let value = "nadav_*&6"
+        let before = tablesQuery.cells.count
+        textField.typeText(value)
+        app.alerts["הוספת פילטר חדש"].buttons["OK"].tap()
+        
+        XCTAssertTrue(tablesQuery.cells.count == before + 1)
+
+        tablesQuery.staticTexts[value].swipeLeft()
+        tablesQuery.buttons["Delete"].tap()
+        XCTAssertTrue(tablesQuery.cells.count == before)
+
     }
 
 }

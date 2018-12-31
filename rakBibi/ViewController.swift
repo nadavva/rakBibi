@@ -23,12 +23,19 @@ class ViewController: UITableViewController {
     }
     
     func addNewFilter(newFilter : String) -> Void {
-        if (newFilter == "") {
-            return
+
+        let splitted : [String] = newFilter.components(separatedBy: ",")
+        for str in splitted {
+            if ((str == "") || (filters.contains(str))) {
+                continue
+            }
+            self.filters.append(str)
         }
-        self.filters.append(newFilter)
-        self.saveFilters()
-        DispatchQueue.main.async { self.tableView.reloadData() }
+        if (splitted.count > 0) {
+            self.saveFilters()
+            DispatchQueue.main.async { self.tableView.reloadData() }
+        }
+        
     }
     
     // MARK: Table
@@ -89,7 +96,7 @@ class ViewController: UITableViewController {
     
     @IBAction func onAddFilterPressed(_ sender: Any) {
         //1. Create the alert controller.
-        let alert = UIAlertController(title: "הוספת פילטר", message: "הזן טקסט לסינון הודעות חדשות", preferredStyle: .alert)
+        let alert = UIAlertController(title: "הוספת פילטר חדש", message: "ניתן להוסיף כמה פילטרים יחד ע״י הפרדתם בפסיק", preferredStyle: .alert)
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
