@@ -47,7 +47,9 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         guard let messageBody = queryRequest.messageBody?.lowercased() else { return .none }
         
-        let defaults = UserDefaults.init(suiteName: "group.rakBibi")
+        self.saveMEssages(str:queryRequest.sender)
+        
+        let defaults = UserDefaults.init(suiteName: "group.microfocus.rakBibbi")
         let filters = defaults?.stringArray(forKey: "myFilters") ?? [String]()
         
         NSLog("Received SMS = \(messageBody)")
@@ -64,6 +66,14 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         
         // Replace with logic to perform offline check whether to filter first (if possible).
         
+    }
+    
+    func saveMEssages(str : String?) -> Void {
+        if (str == nil) {
+            return
+        }
+        let defaults = UserDefaults.init(suiteName: "group.microfocus.rakBibbi")
+        defaults?.set(str, forKey: "myMessages")
     }
     
     private func action(for networkResponse: ILNetworkResponse) -> ILMessageFilterAction {

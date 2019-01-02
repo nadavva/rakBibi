@@ -13,12 +13,12 @@ class ViewController: UITableViewController {
     var filters : [String]  = []
     
     func loadSavedFilters() -> Void {
-        let defaults = UserDefaults.init(suiteName: "group.rakBibi")
+        let defaults = UserDefaults.init(suiteName: "group.microfocus.rakBibbi")
         filters = defaults?.stringArray(forKey: "myFilters") ?? [String]()
     }
     
     func saveFilters() -> Void {
-        let defaults = UserDefaults.init(suiteName: "group.rakBibi")
+        let defaults = UserDefaults.init(suiteName: "group.microfocus.rakBibbi")
         defaults?.set(filters, forKey: "myFilters")
     }
     
