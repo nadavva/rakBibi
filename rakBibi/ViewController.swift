@@ -22,6 +22,8 @@ class ViewController: UITableViewController {
         defaults?.set(filters, forKey: "myFilters")
     }
     
+    @IBOutlet weak var main: UILabel!
+    
     func addNewFilter(newFilter : String) -> Void {
 
         let splitted : [String] = newFilter.components(separatedBy: ",")
@@ -45,6 +47,17 @@ class ViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         loadSavedFilters()
         tableView.allowsSelection = false;
+        main.alpha = 0
+        self.main.frame.origin.y -= 50
+        self.animateTitleLabelIn()
+        
+    }
+    
+    func animateTitleLabelIn() {
+        UIView.animate(withDuration: 1.5) {
+            self.main.alpha = 1
+            self.main.frame.origin.y += 50
+        }
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,14 +65,14 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if (section == 0) {
+        if (section == 1) {
             return 1
         }
         return filters.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.section == 0) {
+        if (indexPath.section == 1) {
             // addFilterCell
             let cell = tableView.dequeueReusableCell(withIdentifier: "addFilterCell", for: indexPath)
             return cell
@@ -72,7 +85,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        if (indexPath.section == 1) {
+        if (indexPath.section == 0) {
             return .delete
         }
         
