@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D31949B821F9B63700E70E75 /* icons8-tick-box-80.png in Resources */ = {isa = PBXBuildFile; fileRef = D31949B621F9B63600E70E75 /* icons8-tick-box-80.png */; };
+		D31949B921F9B63700E70E75 /* icons8-unchecked-checkbox-80.png in Resources */ = {isa = PBXBuildFile; fileRef = D31949B721F9B63600E70E75 /* icons8-unchecked-checkbox-80.png */; };
 		D31D7EF021D3785900178D7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7EEF21D3785900178D7D /* AppDelegate.swift */; };
 		D31D7EF221D3785900178D7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31D7EF121D3785900178D7D /* ViewController.swift */; };
 		D31D7EF521D3785900178D7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31D7EF321D3785900178D7D /* Main.storyboard */; };
@@ -87,6 +89,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D31949B621F9B63600E70E75 /* icons8-tick-box-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-tick-box-80.png"; path = "rakBibi/Assets.xcassets/icons8-tick-box-80.png"; sourceTree = SOURCE_ROOT; };
+		D31949B721F9B63600E70E75 /* icons8-unchecked-checkbox-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icons8-unchecked-checkbox-80.png"; path = "rakBibi/Assets.xcassets/icons8-unchecked-checkbox-80.png"; sourceTree = SOURCE_ROOT; };
 		D31D7EEC21D3785900178D7D /* rakBibi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rakBibi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31D7EEF21D3785900178D7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D31D7EF121D3785900178D7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +241,8 @@
 		D31D7F6C21D3ACBA00178D7D /* appicon */ = {
 			isa = PBXGroup;
 			children = (
+				D31949B621F9B63600E70E75 /* icons8-tick-box-80.png */,
+				D31949B721F9B63600E70E75 /* icons8-unchecked-checkbox-80.png */,
 				D31D7F6E21D3ACBA00178D7D /* Icon-16.png */,
 				D31D7F8521D3ACBA00178D7D /* Icon-20.png */,
 				D31D7F6D21D3ACBA00178D7D /* Icon-29.png */,
@@ -430,9 +436,11 @@
 				D31D7F9921D3ACBA00178D7D /* Icon-72.png in Resources */,
 				D31D7F9121D3ACBA00178D7D /* Icon-76.png in Resources */,
 				D31D7F9021D3ACBA00178D7D /* Icon-144.png in Resources */,
+				D31949B921F9B63700E70E75 /* icons8-unchecked-checkbox-80.png in Resources */,
 				D31D7F9821D3ACBA00178D7D /* Icon-58.png in Resources */,
 				D31D7F9F21D3ACBA00178D7D /* Icon-167.png in Resources */,
 				D31D7F9B21D3ACBA00178D7D /* Icon-80.png in Resources */,
+				D31949B821F9B63700E70E75 /* icons8-tick-box-80.png in Resources */,
 				D31D7FA321D3ACBA00178D7D /* Icon-20.png in Resources */,
 				D31D7F9621D3ACBA00178D7D /* Icon-180.png in Resources */,
 				D31D7FA721D3ACBA00178D7D /* Icon-32.png in Resources */,

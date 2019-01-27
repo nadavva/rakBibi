@@ -48,16 +48,34 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         guard let messageBody = queryRequest.messageBody?.lowercased() else { return .none }
         
         let defaults = UserDefaults.init(suiteName: "group.rakBibi")
-        let filters = defaults?.stringArray(forKey: "myFilters") ?? [String]()
+        let filters = defaults?.array(forKey: "myFilters") as? [[String: Any]] ?? []
         
         NSLog("Received SMS = \(messageBody)")
         NSLog("Filters = \(filters)")
 
-        for word in filters {
-            if (messageBody.contains(word)) {
-                NSLog("SMS contained bad word -- \(word) -- Filttered!")
-                return .filter
+        for filter in filters {
+            let filterValue = filter["value"] as! String
+            let isFullWord = filter["isFullWord"] as! NSInteger
+            
+            NSLog("Current filter = \(filterValue), isFullWord = \(isFullWord == 1 ? true : false)")
+            
+            if (isFullWord == 0) {
+                // contain
+                if (messageBody.contains(filterValue)) {
+                    NSLog("SMS contained bad word -- \(filterValue) -- Filttered!")
+                    return .filter
+                }
+            } else {
+                // search full word is SMS text
+                let smsSprlitted = messageBody.split(separator: " ")
+                for str in smsSprlitted {
+                    if (str == filterValue) {
+                        NSLog("SMS has full word bad word -- \(filterValue) -- Filttered!")
+                        return .filter
+                    }
+                }
             }
+            
         }
         NSLog("SMS passed the filter")
         return .allow
