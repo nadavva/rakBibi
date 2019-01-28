@@ -57,7 +57,8 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
             let filterValue = filter["value"] as! String
             let isFullWord = filter["isFullWord"] as! NSInteger
             
-            NSLog("Current filter = \(filterValue), isFullWord = \(isFullWord == 1 ? true : false)")
+            NSLog("Current filter = \(filterValue), filterType = \(isFullWord)")
+            
             
             if (isFullWord == 0) {
                 // contain
@@ -65,7 +66,7 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
                     NSLog("SMS contained bad word -- \(filterValue) -- Filttered!")
                     return .filter
                 }
-            } else {
+            } else if (isFullWord == 1){
                 // search full word is SMS text
                 let smsSprlitted = messageBody.split(separator: " ")
                 for str in smsSprlitted {
@@ -73,6 +74,14 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
                         NSLog("SMS has full word bad word -- \(filterValue) -- Filttered!")
                         return .filter
                     }
+                }
+            } else if (isFullWord == 2){
+                // sender
+                guard let smsSender = queryRequest.sender?.lowercased() else { return .none }
+                NSLog("Received SMS sender = \(smsSender)")
+                if (smsSender.contains(filterValue)) {
+                    NSLog("SMS sender contain filter value -- \(filterValue) -- Filttered!")
+                    return .filter
                 }
             }
             

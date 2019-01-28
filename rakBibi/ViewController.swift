@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-
-    
     private var dateCellExpanded: Bool = false
     private var expCellIndex: IndexPath = IndexPath(row: -1, section: -1)
     @IBOutlet weak var main: UILabel!
@@ -91,7 +89,7 @@ class ViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             let newFilter = textField?.text
-            self.addNewFilter(value: newFilter ?? "", isFullWord: false)
+            self.addNewFilter(value: newFilter ?? "", filterType: SmsFilterType.Contain)
         }))
         
         // 4. Present the alert.
@@ -102,7 +100,7 @@ class ViewController: UITableViewController {
         if (expCellIndex.section == indexPath.section &&
             expCellIndex.row == indexPath.row) {
             if dateCellExpanded {
-                return 122
+                return 100
             } else {
                 return 44
             }
@@ -111,7 +109,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if dateCellExpanded {
+        if dateCellExpanded && expCellIndex == indexPath{
             dateCellExpanded = false
         } else {
             dateCellExpanded = true
@@ -135,14 +133,14 @@ class ViewController: UITableViewController {
         }
     }
     
-    func addNewFilter(value : String, isFullWord : Bool) -> Void {
+    func addNewFilter(value : String,  filterType: SmsFilterType) -> Void {
         
         let splitted : [String] = value.components(separatedBy: ",")
         for str in splitted {
             if ((str == "") || filterExist(value: str)) {
                 continue
             }
-            self.filters.append(["value": str, "isFullWord": NSNumber(value:isFullWord)])
+            self.filters.append(["value": str, "isFullWord": filterType.rawValue])
         }
         if (splitted.count > 0) {
             //self.saveFilters()
@@ -162,15 +160,9 @@ class ViewController: UITableViewController {
     }
     
     @objc func onFilterDataUpdate(_ notification:Notification) {
-        let indexPath = notification.object as! IndexPath
-        let cur = filters[indexPath.row]["isFullWord"] as! NSNumber
-        
-        if (cur == 0) {
-            filters[indexPath.row]["isFullWord"] = 1
-        } else {
-            filters[indexPath.row]["isFullWord"] = 0
-        }
-        
+        let data:[String:Int] = notification.object as! [String:Int]
+        let index: Int = data["index"] ?? -1
+        filters[index]["isFullWord"] = data["type"]
     }
 }
 
@@ -180,18 +172,16 @@ class FilterCell: UITableViewCell {
     @IBOutlet var tableview: UITableView!
     @IBOutlet weak var fullWordControl: UISegmentedControl!
     
-    @IBAction func onTap(_ sender: UIButton) {
-        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableview)
-        let indexPath = self.tableview.indexPathForRow(at: buttonPosition)
-        
-        NSLog("Received SMS = \(indexPath)")
-        
-    }
-    
     @IBAction func onChange(_ sender: UISegmentedControl) {
         let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableview)
         let indexPath = self.tableview.indexPathForRow(at: buttonPosition)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "onFilterUpdate"), object: indexPath)
+        let data:[String:Int] = ["index":indexPath?.row ?? -1, "type":sender.selectedSegmentIndex]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "onFilterUpdate"), object: data)
     }
-    
+}
+
+enum SmsFilterType : Int {
+    case Contain = 0
+    case FullWord = 1
+    case Sender = 2
 }
