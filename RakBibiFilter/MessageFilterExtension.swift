@@ -46,26 +46,28 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
     
     private func offlineAction(for queryRequest: ILMessageFilterQueryRequest) -> ILMessageFilterAction {
         guard let messageBody = queryRequest.messageBody?.lowercased() else { return .none }
-        
+        guard let messageSender = queryRequest.sender?.lowercased() else { return .none }
+
         let defaults = UserDefaults.init(suiteName: "group.rakBibi")
         let filters = defaults?.array(forKey: "myFilters") as? [[String: Any]] ?? []
         
-        NSLog("Received SMS = \(messageBody)")
+        NSLog("Received SMS Sender= \(messageSender)")
+        NSLog("Received SMS Content = \(messageBody)")
         NSLog("Filters = \(filters)")
 
         for filter in filters {
             let filterValue = filter["value"] as! String
-            let isFullWord = filter["isFullWord"] as! NSInteger
+            let filterType = filter["isFullWord"] as! NSInteger
             
-            NSLog("Current filter = \(filterValue), isFullWord = \(isFullWord == 1 ? true : false)")
+            NSLog("Current filter = \(filterValue), type = \(filterType)")
             
-            if (isFullWord == 0) {
+            if (filterType == 0) {
                 // contain
                 if (messageBody.contains(filterValue)) {
                     NSLog("SMS contained bad word -- \(filterValue) -- Filttered!")
                     return .filter
                 }
-            } else {
+            } else if (filterType == 1){
                 // search full word is SMS text
                 let smsSprlitted = messageBody.split(separator: " ")
                 for str in smsSprlitted {
@@ -74,8 +76,13 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
                         return .filter
                     }
                 }
+            } else if (filterType == 2) {
+                //search in sender
+                if messageSender.contains(filterValue) {
+                    NSLog("SMS sender contain filtered word -- \(filterValue) -- Filttered!")
+                    return .filter
+                }
             }
-            
         }
         NSLog("SMS passed the filter")
         return .allow

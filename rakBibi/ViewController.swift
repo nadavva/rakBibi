@@ -91,7 +91,7 @@ class ViewController: UITableViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak alert] (_) in
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             let newFilter = textField?.text
-            self.addNewFilter(value: newFilter ?? "", isFullWord: false)
+            self.addNewFilter(value: newFilter ?? "", type: 0)
         }))
         
         // 4. Present the alert.
@@ -102,7 +102,7 @@ class ViewController: UITableViewController {
         if (expCellIndex.section == indexPath.section &&
             expCellIndex.row == indexPath.row) {
             if dateCellExpanded {
-                return 122
+                return 100
             } else {
                 return 44
             }
@@ -111,7 +111,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if dateCellExpanded {
+        if dateCellExpanded && expCellIndex == indexPath {
             dateCellExpanded = false
         } else {
             dateCellExpanded = true
@@ -135,14 +135,14 @@ class ViewController: UITableViewController {
         }
     }
     
-    func addNewFilter(value : String, isFullWord : Bool) -> Void {
+    func addNewFilter(value : String, type : NSNumber) -> Void {
         
         let splitted : [String] = value.components(separatedBy: ",")
         for str in splitted {
             if ((str == "") || filterExist(value: str)) {
                 continue
             }
-            self.filters.append(["value": str, "isFullWord": NSNumber(value:isFullWord)])
+            self.filters.append(["value": str, "isFullWord": type])
         }
         if (splitted.count > 0) {
             //self.saveFilters()
@@ -154,7 +154,8 @@ class ViewController: UITableViewController {
     func filterExist(value: String) -> Bool {
         for filter in filters {
             let str : String = filter["value"] as! String
-            if (str == value) {
+            let type : NSNumber = filter["isFullWord"] as! NSNumber
+            if (str == value && type != 0) {
                 return true
             }
         }
@@ -162,15 +163,10 @@ class ViewController: UITableViewController {
     }
     
     @objc func onFilterDataUpdate(_ notification:Notification) {
-        let indexPath = notification.object as! IndexPath
-        let cur = filters[indexPath.row]["isFullWord"] as! NSNumber
-        
-        if (cur == 0) {
-            filters[indexPath.row]["isFullWord"] = 1
-        } else {
-            filters[indexPath.row]["isFullWord"] = 0
-        }
-        
+        let data:[String:Int] = notification.object as! [String:Int]
+        let index = data["index"]
+        let type = data["type"]
+        filters[index!]["isFullWord"] = type
     }
 }
 
@@ -191,7 +187,8 @@ class FilterCell: UITableViewCell {
     @IBAction func onChange(_ sender: UISegmentedControl) {
         let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.tableview)
         let indexPath = self.tableview.indexPathForRow(at: buttonPosition)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "onFilterUpdate"), object: indexPath)
+        let data:[String:Int] = ["index":indexPath?.row ?? -1,"type":sender.selectedSegmentIndex]
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "onFilterUpdate"), object: data)
     }
     
 }
