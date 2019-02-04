@@ -80,7 +80,7 @@ class ViewController: UITableViewController {
     
     @IBAction func onAddFilterPressed(_ sender: Any) {
         //1. Create the alert controller.
-        let alert = UIAlertController(title: "הוספת פילטר חדש", message: "ניתן להוסיף כמה פילטרים יחד ע״י הפרדתם בפסיק", preferredStyle: .alert)
+        let alert = UIAlertController(title:"Add new filter", message: "You can add several filters at once by seperating them with comma (,)", preferredStyle: .alert)
         
         //2. Add the text field. You can configure it however you need.
         alert.addTextField { (textField) in
