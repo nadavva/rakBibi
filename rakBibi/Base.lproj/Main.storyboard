@@ -31,7 +31,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="pLg-AW-14o">
+                                <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLg-AW-14o">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
@@ -121,8 +121,5 @@
             <point key="canvasLocation" x="797.60000000000002" y="107.14285714285715"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Icon-1024.png" width="1024" height="1024"/>
-    </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
