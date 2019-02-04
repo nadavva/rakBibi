@@ -25,8 +25,8 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="174"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="סינון SMSים" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-Nk-4Xq">
-                                    <rect key="frame" x="85.333333333333329" y="63" width="204.66666666666669" height="48"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="SMS Filter App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVO-Nk-4Xq">
+                                    <rect key="frame" x="45.666666666666657" y="63" width="283.66666666666674" height="48"/>
                                     <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -54,9 +54,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODe-s8-u8u">
-                                            <rect key="frame" x="133" y="7.6666666666666661" width="109" height="28.333333333333336"/>
+                                            <rect key="frame" x="140" y="7.6666666666666661" width="95" height="28.333333333333336"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                            <state key="normal" title="+ הוספת פילטר">
+                                            <state key="normal" title="+ Add Filter">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
@@ -89,9 +89,9 @@
                                             <rect key="frame" x="16" y="61" width="343" height="29"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <segments>
-                                                <segment title="מוכל בטקסט"/>
-                                                <segment title="מילה שלמה"/>
-                                                <segment title="שולח הסמס"/>
+                                                <segment title="Contained"/>
+                                                <segment title="Full word"/>
+                                                <segment title="Sender"/>
                                             </segments>
                                             <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <connections>
