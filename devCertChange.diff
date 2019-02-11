@@ -1,0 +1,158 @@
+diff --git a/RakBibiFilter/MessageFilterExtension.swift b/RakBibiFilter/MessageFilterExtension.swift
+index 4110401..042e3a2 100644
+--- a/RakBibiFilter/MessageFilterExtension.swift
++++ b/RakBibiFilter/MessageFilterExtension.swift
+@@ -48,7 +48,7 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
+         guard let messageBody = queryRequest.messageBody?.lowercased() else { return .none }
+         guard let messageSender = queryRequest.sender?.lowercased() else { return .none }
+ 
+-        let defaults = UserDefaults.init(suiteName: "group.rakBibi")
++        let defaults = UserDefaults.init(suiteName: "group.com.microfocus.mc.rakBibi")
+         let filters = defaults?.array(forKey: "myFilters") as? [[String: Any]] ?? []
+         
+         NSLog("Received SMS Sender= \(messageSender)")
+diff --git a/RakBibiFilter/RakBibiFilter.entitlements b/RakBibiFilter/RakBibiFilter.entitlements
+index cd71d5d..10db9cc 100644
+--- a/RakBibiFilter/RakBibiFilter.entitlements
++++ b/RakBibiFilter/RakBibiFilter.entitlements
+@@ -4,7 +4,7 @@
+ <dict>
+ 	<key>com.apple.security.application-groups</key>
+ 	<array>
+-		<string>group.rakBibi</string>
++		<string>group.com.microfocus.mc.rakBibi</string>
+ 	</array>
+ </dict>
+ </plist>
+diff --git a/rakBibi.xcodeproj/project.pbxproj b/rakBibi.xcodeproj/project.pbxproj
+index 155d148..9237f00 100644
+--- a/rakBibi.xcodeproj/project.pbxproj
++++ b/rakBibi.xcodeproj/project.pbxproj
+@@ -675,13 +675,13 @@
+ 				CODE_SIGN_ENTITLEMENTS = rakBibi/rakBibi.entitlements;
+ 				CODE_SIGN_IDENTITY = "iPhone Developer";
+ 				CODE_SIGN_STYLE = Automatic;
+-				DEVELOPMENT_TEAM = 5PZV63JGX7;
++				DEVELOPMENT_TEAM = RSREPV7YSL;
+ 				INFOPLIST_FILE = rakBibi/Info.plist;
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/Frameworks",
+ 				);
+-				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.rakBibbi;
++				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.nv.rakBibbi;
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				PROVISIONING_PROFILE_SPECIFIER = "";
+ 				SWIFT_VERSION = 4.2;
+@@ -698,13 +698,13 @@
+ 				CODE_SIGN_ENTITLEMENTS = rakBibi/rakBibi.entitlements;
+ 				CODE_SIGN_IDENTITY = "iPhone Developer";
+ 				CODE_SIGN_STYLE = Automatic;
+-				DEVELOPMENT_TEAM = 5PZV63JGX7;
++				DEVELOPMENT_TEAM = RSREPV7YSL;
+ 				INFOPLIST_FILE = rakBibi/Info.plist;
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/Frameworks",
+ 				);
+-				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.rakBibbi;
++				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.nv.rakBibbi;
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				PROVISIONING_PROFILE_SPECIFIER = "";
+ 				SWIFT_VERSION = 4.2;
+@@ -800,14 +800,14 @@
+ 				CODE_SIGN_ENTITLEMENTS = RakBibiFilter/RakBibiFilter.entitlements;
+ 				CODE_SIGN_IDENTITY = "iPhone Developer";
+ 				CODE_SIGN_STYLE = Automatic;
+-				DEVELOPMENT_TEAM = 5PZV63JGX7;
++				DEVELOPMENT_TEAM = RSREPV7YSL;
+ 				INFOPLIST_FILE = RakBibiFilter/Info.plist;
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/Frameworks",
+ 					"@executable_path/../../Frameworks",
+ 				);
+-				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.rakBibbi.RakBibiFilter;
++				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.nv.rakBibbi.RakBibiFilter;
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				PROVISIONING_PROFILE_SPECIFIER = "";
+ 				SKIP_INSTALL = YES;
+@@ -822,14 +822,14 @@
+ 				CODE_SIGN_ENTITLEMENTS = RakBibiFilter/RakBibiFilter.entitlements;
+ 				CODE_SIGN_IDENTITY = "iPhone Developer";
+ 				CODE_SIGN_STYLE = Automatic;
+-				DEVELOPMENT_TEAM = 5PZV63JGX7;
++				DEVELOPMENT_TEAM = RSREPV7YSL;
+ 				INFOPLIST_FILE = RakBibiFilter/Info.plist;
+ 				LD_RUNPATH_SEARCH_PATHS = (
+ 					"$(inherited)",
+ 					"@executable_path/Frameworks",
+ 					"@executable_path/../../Frameworks",
+ 				);
+-				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.rakBibbi.RakBibiFilter;
++				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.nv.rakBibbi.RakBibiFilter;
+ 				PRODUCT_NAME = "$(TARGET_NAME)";
+ 				PROVISIONING_PROFILE_SPECIFIER = "";
+ 				SKIP_INSTALL = YES;
+diff --git a/rakBibi.xcodeproj/xcuserdata/vanunu.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist b/rakBibi.xcodeproj/xcuserdata/vanunu.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+index 8b4e838..8014a70 100644
+--- a/rakBibi.xcodeproj/xcuserdata/vanunu.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
++++ b/rakBibi.xcodeproj/xcuserdata/vanunu.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+@@ -10,7 +10,7 @@
+             ignoreCount = "0"
+             continueAfterRunningActions = "No"
+             filePath = "rakBibi/ViewController.swift"
+-            timestampString = "570457739.039223"
++            timestampString = "571569681.398556"
+             startingColumnNumber = "9223372036854775807"
+             endingColumnNumber = "9223372036854775807"
+             startingLineNumber = "92"
+@@ -26,7 +26,7 @@
+             ignoreCount = "0"
+             continueAfterRunningActions = "No"
+             filePath = "rakBibi/ViewController.swift"
+-            timestampString = "570457739.041924"
++            timestampString = "571569681.3989151"
+             startingColumnNumber = "9223372036854775807"
+             endingColumnNumber = "9223372036854775807"
+             startingLineNumber = "75"
+@@ -58,7 +58,7 @@
+             ignoreCount = "0"
+             continueAfterRunningActions = "No"
+             filePath = "rakBibi/ViewController.swift"
+-            timestampString = "570457739.042079"
++            timestampString = "571569681.399174"
+             startingColumnNumber = "9223372036854775807"
+             endingColumnNumber = "9223372036854775807"
+             startingLineNumber = "62"
+diff --git a/rakBibi/ViewController.swift b/rakBibi/ViewController.swift
+index d55abb0..ac18b6c 100644
+--- a/rakBibi/ViewController.swift
++++ b/rakBibi/ViewController.swift
+@@ -126,11 +126,11 @@ class ViewController: UITableViewController {
+     
+     var filters: [[String: Any]] {
+         get {
+-            let defaults = UserDefaults.init(suiteName: "group.rakBibi")
++            let defaults = UserDefaults.init(suiteName: "group.com.microfocus.mc.rakBibi")
+             return defaults?.array(forKey: "myFilters") as? [[String: Any]] ?? []
+         }
+         set {
+-            let defaults = UserDefaults.init(suiteName: "group.rakBibi")
++            let defaults = UserDefaults.init(suiteName: "group.com.microfocus.mc.rakBibi")
+             defaults?.set(newValue as [Any], forKey: "myFilters")
+         }
+     }
+diff --git a/rakBibi/rakBibi.entitlements b/rakBibi/rakBibi.entitlements
+index cd71d5d..10db9cc 100644
+--- a/rakBibi/rakBibi.entitlements
++++ b/rakBibi/rakBibi.entitlements
+@@ -4,7 +4,7 @@
+ <dict>
+ 	<key>com.apple.security.application-groups</key>
+ 	<array>
+-		<string>group.rakBibi</string>
++		<string>group.com.microfocus.mc.rakBibi</string>
+ 	</array>
+ </dict>
+ </plist>
