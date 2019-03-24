@@ -61,7 +61,13 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
             
             NSLog("Current filter = \(filterValue), type = \(filterType)")
             
-            if (filterType == 0) {
+            if (filterType == 3) {
+                // allowed
+                if (messageSender == filterValue) {
+                    NSLog("SMS sender allowed -- \(filterValue) !")
+                    return .allow
+                }
+            } else if (filterType == 0) {
                 // contain
                 if (messageBody.contains(filterValue)) {
                     NSLog("SMS contained bad word -- \(filterValue) -- Filttered!")
