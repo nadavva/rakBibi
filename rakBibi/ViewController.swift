@@ -126,11 +126,11 @@ class ViewController: UITableViewController {
     
     var filters: [[String: Any]] {
         get {
-            let defaults = UserDefaults.init(suiteName: "group.rakBibi")
+            let defaults = UserDefaults.init(suiteName: "group.mf.smsFilter")
             return defaults?.array(forKey: "myFilters") as? [[String: Any]] ?? []
         }
         set {
-            let defaults = UserDefaults.init(suiteName: "group.rakBibi")
+            let defaults = UserDefaults.init(suiteName: "group.mf.smsFilter")
             defaults?.set(newValue as [Any], forKey: "myFilters")
         }
     }

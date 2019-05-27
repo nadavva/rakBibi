@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.security.application-groups</key>
 	<array>
-		<string>group.rakBibi</string>
+		<string>group.mf.smsFilter</string>
 	</array>
 </dict>
 </plist>

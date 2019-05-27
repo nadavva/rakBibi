@@ -48,6 +48,26 @@
 		D31D7FA621D3ACBA00178D7D /* Icon-114.png in Resources */ = {isa = PBXBuildFile; fileRef = D31D7F8821D3ACBA00178D7D /* Icon-114.png */; };
 		D31D7FA721D3ACBA00178D7D /* Icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = D31D7F8921D3ACBA00178D7D /* Icon-32.png */; };
 		D31D7FA821D3ACBA00178D7D /* Icon-512.png in Resources */ = {isa = PBXBuildFile; fileRef = D31D7F8A21D3ACBA00178D7D /* Icon-512.png */; };
+		D36913E522958B8D005DB3FD /* kisspng-iphone-sms copy.zip in Resources */ = {isa = PBXBuildFile; fileRef = D36913D022958B8D005DB3FD /* kisspng-iphone-sms copy.zip */; };
+		D36913E622958B8D005DB3FD /* iTunesArtwork@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D122958B8D005DB3FD /* iTunesArtwork@1x.png */; };
+		D36913E722958B8D005DB3FD /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D322958B8D005DB3FD /* Icon-App-76x76@2x.png */; };
+		D36913E822958B8D005DB3FD /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D422958B8D005DB3FD /* Icon-App-29x29@1x.png */; };
+		D36913E922958B8D005DB3FD /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D522958B8D005DB3FD /* Icon-App-40x40@1x.png */; };
+		D36913EA22958B8D005DB3FD /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D622958B8D005DB3FD /* Icon-App-20x20@1x.png */; };
+		D36913EB22958B8D005DB3FD /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D722958B8D005DB3FD /* Icon-App-83.5x83.5@2x.png */; };
+		D36913EC22958B8D005DB3FD /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D822958B8D005DB3FD /* Icon-App-20x20@3x.png */; };
+		D36913ED22958B8D005DB3FD /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913D922958B8D005DB3FD /* ItunesArtwork@2x.png */; };
+		D36913EE22958B8D005DB3FD /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = D36913DA22958B8D005DB3FD /* Contents.json */; };
+		D36913EF22958B8D005DB3FD /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913DB22958B8D005DB3FD /* Icon-App-20x20@2x.png */; };
+		D36913F022958B8D005DB3FD /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913DC22958B8D005DB3FD /* Icon-App-29x29@3x.png */; };
+		D36913F122958B8D005DB3FD /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913DD22958B8D005DB3FD /* Icon-App-40x40@2x.png */; };
+		D36913F222958B8D005DB3FD /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913DE22958B8D005DB3FD /* Icon-App-60x60@3x.png */; };
+		D36913F322958B8D005DB3FD /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913DF22958B8D005DB3FD /* Icon-App-60x60@2x.png */; };
+		D36913F422958B8D005DB3FD /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913E022958B8D005DB3FD /* Icon-App-76x76@1x.png */; };
+		D36913F522958B8D005DB3FD /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913E122958B8D005DB3FD /* Icon-App-40x40@3x.png */; };
+		D36913F622958B8D005DB3FD /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913E222958B8D005DB3FD /* Icon-App-29x29@2x.png */; };
+		D36913F722958B8D005DB3FD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913E322958B8D005DB3FD /* iTunesArtwork@2x.png */; };
+		D36913F822958B8D005DB3FD /* iTunesArtwork@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D36913E422958B8D005DB3FD /* iTunesArtwork@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +159,26 @@
 		D31D7F8821D3ACBA00178D7D /* Icon-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-114.png"; sourceTree = "<group>"; };
 		D31D7F8921D3ACBA00178D7D /* Icon-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-32.png"; sourceTree = "<group>"; };
 		D31D7F8A21D3ACBA00178D7D /* Icon-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-512.png"; sourceTree = "<group>"; };
+		D36913D022958B8D005DB3FD /* kisspng-iphone-sms copy.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "kisspng-iphone-sms copy.zip"; sourceTree = "<group>"; };
+		D36913D122958B8D005DB3FD /* iTunesArtwork@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@1x.png"; sourceTree = "<group>"; };
+		D36913D322958B8D005DB3FD /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		D36913D422958B8D005DB3FD /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		D36913D522958B8D005DB3FD /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		D36913D622958B8D005DB3FD /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		D36913D722958B8D005DB3FD /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		D36913D822958B8D005DB3FD /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		D36913D922958B8D005DB3FD /* ItunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItunesArtwork@2x.png"; sourceTree = "<group>"; };
+		D36913DA22958B8D005DB3FD /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		D36913DB22958B8D005DB3FD /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		D36913DC22958B8D005DB3FD /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		D36913DD22958B8D005DB3FD /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		D36913DE22958B8D005DB3FD /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		D36913DF22958B8D005DB3FD /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		D36913E022958B8D005DB3FD /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		D36913E122958B8D005DB3FD /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		D36913E222958B8D005DB3FD /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		D36913E322958B8D005DB3FD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		D36913E422958B8D005DB3FD /* iTunesArtwork@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +222,7 @@
 				D31D7F2221D378B000178D7D /* RakBibiFilter */,
 				D31D7EED21D3785900178D7D /* Products */,
 				D31D7F6C21D3ACBA00178D7D /* appicon */,
+				D36913CF22958B8D005DB3FD /* smsIcons */,
 			);
 			sourceTree = "<group>";
 		};
@@ -276,6 +317,42 @@
 			);
 			name = appicon;
 			path = rakBibi/appicon;
+			sourceTree = "<group>";
+		};
+		D36913CF22958B8D005DB3FD /* smsIcons */ = {
+			isa = PBXGroup;
+			children = (
+				D36913D022958B8D005DB3FD /* kisspng-iphone-sms copy.zip */,
+				D36913D122958B8D005DB3FD /* iTunesArtwork@1x.png */,
+				D36913D222958B8D005DB3FD /* AppIcon.appiconset */,
+				D36913E322958B8D005DB3FD /* iTunesArtwork@2x.png */,
+				D36913E422958B8D005DB3FD /* iTunesArtwork@3x.png */,
+			);
+			name = smsIcons;
+			path = rakBibi/smsIcons;
+			sourceTree = "<group>";
+		};
+		D36913D222958B8D005DB3FD /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				D36913D322958B8D005DB3FD /* Icon-App-76x76@2x.png */,
+				D36913D422958B8D005DB3FD /* Icon-App-29x29@1x.png */,
+				D36913D522958B8D005DB3FD /* Icon-App-40x40@1x.png */,
+				D36913D622958B8D005DB3FD /* Icon-App-20x20@1x.png */,
+				D36913D722958B8D005DB3FD /* Icon-App-83.5x83.5@2x.png */,
+				D36913D822958B8D005DB3FD /* Icon-App-20x20@3x.png */,
+				D36913D922958B8D005DB3FD /* ItunesArtwork@2x.png */,
+				D36913DA22958B8D005DB3FD /* Contents.json */,
+				D36913DB22958B8D005DB3FD /* Icon-App-20x20@2x.png */,
+				D36913DC22958B8D005DB3FD /* Icon-App-29x29@3x.png */,
+				D36913DD22958B8D005DB3FD /* Icon-App-40x40@2x.png */,
+				D36913DE22958B8D005DB3FD /* Icon-App-60x60@3x.png */,
+				D36913DF22958B8D005DB3FD /* Icon-App-60x60@2x.png */,
+				D36913E022958B8D005DB3FD /* Icon-App-76x76@1x.png */,
+				D36913E122958B8D005DB3FD /* Icon-App-40x40@3x.png */,
+				D36913E222958B8D005DB3FD /* Icon-App-29x29@2x.png */,
+			);
+			path = AppIcon.appiconset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,23 +494,37 @@
 			files = (
 				D31D7F8E21D3ACBA00178D7D /* Icon-120.png in Resources */,
 				D31D7FA121D3ACBA00178D7D /* Icon-50.png in Resources */,
+				D36913EA22958B8D005DB3FD /* Icon-App-20x20@1x.png in Resources */,
 				D31D7EFA21D3785A00178D7D /* LaunchScreen.storyboard in Resources */,
 				D31D7F9D21D3ACBA00178D7D /* Icon-55.png in Resources */,
 				D31D7F9E21D3ACBA00178D7D /* Icon-172.png in Resources */,
+				D36913F322958B8D005DB3FD /* Icon-App-60x60@2x.png in Resources */,
+				D36913F122958B8D005DB3FD /* Icon-App-40x40@2x.png in Resources */,
+				D36913E922958B8D005DB3FD /* Icon-App-40x40@1x.png in Resources */,
 				D31D7EF721D3785A00178D7D /* Assets.xcassets in Resources */,
 				D31D7FA421D3ACBA00178D7D /* Icon-128.png in Resources */,
 				D31D7EF521D3785900178D7D /* Main.storyboard in Resources */,
 				D31D7F9221D3ACBA00178D7D /* Icon-60.png in Resources */,
+				D36913ED22958B8D005DB3FD /* ItunesArtwork@2x.png in Resources */,
 				D31D7F8F21D3ACBA00178D7D /* Icon-88.png in Resources */,
+				D36913F522958B8D005DB3FD /* Icon-App-40x40@3x.png in Resources */,
+				D36913F822958B8D005DB3FD /* iTunesArtwork@3x.png in Resources */,
+				D36913E522958B8D005DB3FD /* kisspng-iphone-sms copy.zip in Resources */,
 				D31D7FA821D3ACBA00178D7D /* Icon-512.png in Resources */,
+				D36913E722958B8D005DB3FD /* Icon-App-76x76@2x.png in Resources */,
 				D31D7F8B21D3ACBA00178D7D /* Icon-29.png in Resources */,
 				D31D7F8D21D3ACBA00178D7D /* Icon-256.png in Resources */,
 				D31D7F9321D3ACBA00178D7D /* Icon-48.png in Resources */,
 				D31D7F9521D3ACBA00178D7D /* Icon-152.png in Resources */,
+				D36913EE22958B8D005DB3FD /* Contents.json in Resources */,
+				D36913E822958B8D005DB3FD /* Icon-App-29x29@1x.png in Resources */,
 				D31D7F9421D3ACBA00178D7D /* Icon-1024.png in Resources */,
 				D31D7F9C21D3ACBA00178D7D /* Icon-57.png in Resources */,
+				D36913F222958B8D005DB3FD /* Icon-App-60x60@3x.png in Resources */,
+				D36913EB22958B8D005DB3FD /* Icon-App-83.5x83.5@2x.png in Resources */,
 				D31D7F9A21D3ACBA00178D7D /* Icon-196.png in Resources */,
 				D31D7F9921D3ACBA00178D7D /* Icon-72.png in Resources */,
+				D36913EC22958B8D005DB3FD /* Icon-App-20x20@3x.png in Resources */,
 				D31D7F9121D3ACBA00178D7D /* Icon-76.png in Resources */,
 				D31D7F9021D3ACBA00178D7D /* Icon-144.png in Resources */,
 				D31949B921F9B63700E70E75 /* icons8-unchecked-checkbox-80.png in Resources */,
@@ -441,14 +532,20 @@
 				D31D7F9F21D3ACBA00178D7D /* Icon-167.png in Resources */,
 				D31D7F9B21D3ACBA00178D7D /* Icon-80.png in Resources */,
 				D31949B821F9B63700E70E75 /* icons8-tick-box-80.png in Resources */,
+				D36913F022958B8D005DB3FD /* Icon-App-29x29@3x.png in Resources */,
 				D31D7FA321D3ACBA00178D7D /* Icon-20.png in Resources */,
 				D31D7F9621D3ACBA00178D7D /* Icon-180.png in Resources */,
+				D36913F422958B8D005DB3FD /* Icon-App-76x76@1x.png in Resources */,
 				D31D7FA721D3ACBA00178D7D /* Icon-32.png in Resources */,
 				D31D7F9721D3ACBA00178D7D /* Icon-64.png in Resources */,
 				D31D7F8C21D3ACBA00178D7D /* Icon-16.png in Resources */,
+				D36913EF22958B8D005DB3FD /* Icon-App-20x20@2x.png in Resources */,
 				D31D7FA021D3ACBA00178D7D /* Icon-40.png in Resources */,
 				D31D7FA521D3ACBA00178D7D /* Icon-100.png in Resources */,
+				D36913F722958B8D005DB3FD /* iTunesArtwork@2x.png in Resources */,
+				D36913F622958B8D005DB3FD /* Icon-App-29x29@2x.png in Resources */,
 				D31D7FA221D3ACBA00178D7D /* Icon-87.png in Resources */,
+				D36913E622958B8D005DB3FD /* iTunesArtwork@1x.png in Resources */,
 				D31D7FA621D3ACBA00178D7D /* Icon-114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,17 +768,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = rakBibi/rakBibi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PZV63JGX7;
+				DEVELOPMENT_TEAM = R3ACRDSPDN;
 				INFOPLIST_FILE = rakBibi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nv.microfocus.rakBibbi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.mc.smsFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -694,17 +790,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = rakBibi/rakBibi.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PZV63JGX7;
+				DEVELOPMENT_TEAM = R3ACRDSPDN;
 				INFOPLIST_FILE = rakBibi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nv.microfocus.rakBibbi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.mc.smsFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
@@ -800,14 +895,14 @@
 				CODE_SIGN_ENTITLEMENTS = RakBibiFilter/RakBibiFilter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PZV63JGX7;
+				DEVELOPMENT_TEAM = R3ACRDSPDN;
 				INFOPLIST_FILE = RakBibiFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nv.microfocus.rakBibbi.RakBibiFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.mc.smsFilter.ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -822,14 +917,14 @@
 				CODE_SIGN_ENTITLEMENTS = RakBibiFilter/RakBibiFilter.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5PZV63JGX7;
+				DEVELOPMENT_TEAM = R3ACRDSPDN;
 				INFOPLIST_FILE = RakBibiFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.nv.microfocus.rakBibbi.RakBibiFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.microfocus.mc.smsFilter.ext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

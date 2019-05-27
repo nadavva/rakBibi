@@ -48,26 +48,38 @@ extension MessageFilterExtension: ILMessageFilterQueryHandling {
         guard let messageBody = queryRequest.messageBody?.lowercased() else { return .none }
         guard let messageSender = queryRequest.sender?.lowercased() else { return .none }
 
-        let defaults = UserDefaults.init(suiteName: "group.rakBibi")
+        let defaults = UserDefaults.init(suiteName: "group.mf.smsFilter")
         let filters = defaults?.array(forKey: "myFilters") as? [[String: Any]] ?? []
+        
+        //create whitelist
+        var whiteList: [[String:Any]] = []
+        for filter in filters {
+            let filterType = filter["isFullWord"] as! NSInteger
+            if (filterType == 3) {
+                whiteList.append(filter)
+            }
+        }
         
         NSLog("Received SMS Sender= \(messageSender)")
         NSLog("Received SMS Content = \(messageBody)")
         NSLog("Filters = \(filters)")
+        NSLog("WhiteList = \(whiteList)")
 
+        for filter in whiteList {
+            let filterValue = filter["value"] as! String
+            if (messageSender == filterValue) {
+                NSLog("SMS sender allowed -- \(filterValue) !")
+                return .allow
+            }
+        }
+        
         for filter in filters {
             let filterValue = filter["value"] as! String
             let filterType = filter["isFullWord"] as! NSInteger
             
             NSLog("Current filter = \(filterValue), type = \(filterType)")
             
-            if (filterType == 3) {
-                // allowed
-                if (messageSender == filterValue) {
-                    NSLog("SMS sender allowed -- \(filterValue) !")
-                    return .allow
-                }
-            } else if (filterType == 0) {
+            if (filterType == 0) {
                 // contain
                 if (messageBody.contains(filterValue)) {
                     NSLog("SMS contained bad word -- \(filterValue) -- Filttered!")
